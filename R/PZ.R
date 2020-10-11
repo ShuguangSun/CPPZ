@@ -20,11 +20,8 @@
 
 #' @return a list of three vectors
 #' \itemize{
-#' \item CP_obs : conditional power, given 1) observed effect at interim, 2) total sample size, \cr
-#' 3) Assumed true effect= "eff_est" parameter
-#' #' \item CP_planned : conditional power, given 1) observed effect at interim, 2) total sample size, \cr
-#' 3) Assumed true effect= "eff_planned" parameter
-#' #' \item n2_inc_new : additional patients needed to obtain given power
+#' \item CP_ll lower boundary of promising zone (z-score, b-value, conditional power, effect scale)
+#' \item CP_ul upper boundary of promising zone (z-score, b-value, conditional power, effect scale)
 #' }
 #' @references Lan and Wittes. The B-Value: A Tool for Monitoring Data. Biometrics 1988;44:579-585 \cr
 #' Mehta and Pocock
@@ -62,8 +59,8 @@ PZ<-function(r,n1=NULL,n2=NULL,alpha_1s,eff_null=NULL,SE=NULL,type,pow=NULL,f=NU
   b            <- n2_real^(-0.5)*( (sqrt(n2_real_inc/n2_inc))*(zalpha*sqrt(n2)-z1*sqrt(n1))+z1*sqrt(n1))
 
   Results <- data.frame(cbind(z1,b,CP))
-  CP_ll<-Results[min(which(Results$b <= zalpha)),]
-  CP_ul<-Results[max(which(Results$b <= zalpha)),]
+  CP_ll<-Results[min(which(Results$b <= zalpha)),];rownames(CP_ll)<-NULL
+  CP_ul<-Results[max(which(Results$b <= zalpha)),];rownames(CP_ul)<-NULL
 
   plot(CP,b,type="l",xlim=c(0,1),ylim=c(min(b),2.05),lwd=1)
   grid()
