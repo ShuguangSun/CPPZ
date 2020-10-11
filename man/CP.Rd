@@ -69,5 +69,6 @@ CP(r=0.5,n1=316,n2=633,alpha_1s=0.025,eff_est=1.5,eff_planned=1.96,eff_null=0,SE
 }
 \references{
 Lan and Wittes. The B-Value: A Tool for Monitoring Data. Biometrics 1988;44:579-585 \cr
-Mehta and Pocock
+Mehta CR, Pocock SJ. Adaptive increase in sample size when interim results are promising: A practical \cr
+guide with examples. Statist. Med. 2011;30:3267–3284
 }
