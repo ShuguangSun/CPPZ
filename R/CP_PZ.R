@@ -35,7 +35,8 @@
 #' \item CP_ul upper boundary of promising zone (z-score, b-value, conditional power, effect scale)
 #' }
 #' @references Lan and Wittes. The B-Value: A Tool for Monitoring Data. Biometrics 1988;44:579-585 \cr
-#' Mehta and Pocock
+#' Mehta CR, Pocock SJ. Adaptive increase in sample size when interim results are promising: A practical \cr
+#' guide with examples. Statist. Med. 2011;30:3267–3284
 #' @export
 #' @examples
 #' CP_PZ(r=0.5,n1=72,n2=180,alpha_1s=0.025,eff_est=0.7,eff_planned=0.7,eff_null=1,SE=NULL,
