@@ -1,0 +1,12 @@
+Package: CPPZ
+Type: Package
+Title: Calculate conditional power and promising zone at interim analysis
+Version: 0.1.0
+Maintainer: Koenraad D'Hollander <koenraad.dhollander@iddi.com>
+Author: c(
+    person("Koenraad", "D'Hollander", role = c("aut", "cre", "cph"), email = "koenraad.dhollander@iddi.com"))
+Description: Calculate conditional power and promising zone at interim analysis.
+License: GPL (>= 2)
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.1
